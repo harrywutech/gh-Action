@@ -9,15 +9,3 @@ jobs:
     steps:
     - name: output github context
       run: echo "${{ toJSON(github) }}"
-
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Run tests
-      run: npm test
